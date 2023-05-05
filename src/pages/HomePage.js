@@ -30,6 +30,8 @@ const HomePage = () => {
     },
     imgContainer: {
       overflow: 'hidden',
+      marginTop: '32px',
+      borderRadius: '16px'
     },
     imgFood: {
       width: '300px'
