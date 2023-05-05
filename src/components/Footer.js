@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer>
-      <img />
+      <img alt=""/>
       <div>
         Doormat Navigation Home
         About
