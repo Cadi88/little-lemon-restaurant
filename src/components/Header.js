@@ -11,7 +11,7 @@ const Header = () => {
       alignItems: 'center',
     },
     logo: {
-      marginRight: '56px'
+      marginRight: '120px'
     }
   }
   return (

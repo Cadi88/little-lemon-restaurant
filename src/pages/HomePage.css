@@ -1,0 +1,146 @@
+.section1 {
+  background-color: #495e57;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  gap: 124px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.title {
+  font-family: 'Markazi Text', serif;
+  font-size: 56px;
+  color: #f4ce14;
+}
+
+.subtitle {
+  font-family: Markazi Text;
+  font-size: 32px;
+  color: white;
+}
+
+.desc {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.section1 button,
+.section2 .header button {
+  background-color: #f4ce14;
+  border: 1px solid #f4ce14;
+  border-radius: 16px;
+  width: 200px;
+  height: 48px;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.imgContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  top: 32px;
+  width: 350px;
+  height: 350px;
+}
+
+.imgFood {
+  width: 100%;
+  margin-top: -72px;
+}
+
+.section2 {
+  height: 500px;
+  background-color: white;
+}
+
+.section2 .header {
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+  gap: 150px;
+}
+
+.section2 .header span {
+  font-family: 'Markazi Text', serif;
+  font-size: 56px;
+}
+.section2 .header button {
+  margin-right: 48px;
+}
+
+.section2 .content {
+  display: flex;
+  gap: 32px
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  background-color: #edefee;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+.dish-card img {
+  width: 100%;
+}
+
+.card-header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 0 18px;
+}
+
+.card-header .card-desc {
+  font-family: 'Markazi Text', serif;
+  font-size: 24px;
+}
+
+.card-header .dish-price {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: #ee9972;
+}
+
+.card-desc {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  margin-top: 16px;
+  padding: 0 18px;
+  color: #495e57;
+}
+
+.card-actions {
+  margin-top: 16px;
+  padding: 0 18px 18px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-actions span:first-child {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card-actions .icon {
+  color: red;
+}
