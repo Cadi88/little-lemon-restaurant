@@ -40,6 +40,12 @@
   font-family: 'Karla', sans-serif;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.section1 button a,
+.section2 .header button a {
+  text-decoration: none;
 }
 
 .imgContainer {
@@ -57,13 +63,14 @@
 }
 
 .section2 {
-  height: 500px;
+  height: 590px;
   background-color: white;
 }
 
 .section2 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 64px;
   gap: 150px;
 }
@@ -78,69 +85,9 @@
 
 .section2 .content {
   display: flex;
-  gap: 32px
-}
-
-.dish-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-  background-color: #edefee;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  overflow: hidden;
-}
-
-.dish-card img {
-  width: 100%;
-}
-
-.card-header {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   margin-top: 24px;
-  padding: 0 18px;
+  gap: 28px
 }
 
-.card-header .card-desc {
-  font-family: 'Markazi Text', serif;
-  font-size: 24px;
-}
 
-.card-header .dish-price {
-  font-family: 'Karla', sans-serif;
-  font-size: 16px;
-  color: #ee9972;
-}
-
-.card-desc {
-  font-family: 'Karla', sans-serif;
-  font-size: 16px;
-  margin-top: 16px;
-  padding: 0 18px;
-  color: #495e57;
-}
-
-.card-actions {
-  margin-top: 16px;
-  padding: 0 18px 18px;
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.card-actions span:first-child {
-  font-family: 'Karla', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.card-actions .icon {
-  color: red;
-}

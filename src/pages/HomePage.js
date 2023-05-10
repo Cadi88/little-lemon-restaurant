@@ -1,10 +1,48 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import DishCard from '../components/DishCard';
 import imgFood from '../assets/restauranfood.jpg';
 import imgGreekSalad from '../assets/greek salad.jpg';
+import imgBruchetta from '../assets/bruchetta.svg';
+import imgLemonDessert from '../assets/lemon dessert.jpg';
 
-import classes from './HomePage.css';
+import './HomePage.css';
+
+const DISHES = [
+  {
+    img: imgGreekSalad,
+    title: 'Greek salad',
+    price: '12,99',
+    desc: 'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ',
+  },
+  {
+    img: imgBruchetta,
+    title: 'Bruchetta',
+    price: '5,99',
+    desc: 'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. ',
+  },
+  {
+    img: imgLemonDessert,
+    title: 'Lemon dessert',
+    price: '5,00',
+    desc: 'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
+  },
+];
 
 const HomePage = () => {
+  const dishes = DISHES.map((dish) => {
+    return (
+      <DishCard
+        key={dish.title}
+        img={dish.img}
+        title={dish.title}
+        price={dish.price}
+        desc={dish.desc}
+      />
+    );
+  });
+
   return (
     <>
       <section className="section1">
@@ -17,7 +55,9 @@ const HomePage = () => {
             focused on traditional <br /> recipes served with a modern <br />{' '}
             twist.
           </p>
-          <button>Reserve a Table</button>
+          <button>
+            <Link to="/reservations">Reserve a Table</Link>
+          </button>
         </div>
         <div className="imgContainer">
           <img src={imgFood} className="imgFood" alt="Chef" />
@@ -28,24 +68,7 @@ const HomePage = () => {
           <span>This week specials</span>
           <button>Online Menu</button>
         </div>
-        <div className="content">
-          <div className="dish-card">
-            <img src={imgGreekSalad} alt="Greek salad" />
-            <div className="card-header">
-              <span className="dish-title">Greek salad</span>
-              <span className="dish-price">$ 12.99</span>
-            </div>
-            <div className="card-desc">
-              The famous greek salad of crispy lettuce, peppers, olives and our
-              Chicago style feta cheese, garnished with crunchy garlic and
-              rosemary croutons.
-            </div>
-            <div className="card-actions">
-              <span>Order a delivery</span>
-              <span className='icon'>icon</span>
-            </div>
-          </div>
-        </div>
+        <div className="content">{dishes}</div>
       </section>
     </>
   );
