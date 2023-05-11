@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 
-const BookingForm = ({}) => {
+const BookingForm = ({ availableTimes, updateTimes }) => {
   const [bookingDate, setBookingDate] = useState('');
   const [bookingTime, setBookingTime] = useState('');
-  const [guests, setGuests] = useState('');
+  const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
+
+  const [finalTime, setFinalTime] = useState(
+    availableTimes.map((times) => <option key={times}>{times}</option>)
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +18,17 @@ const BookingForm = ({}) => {
     setOccasion('');
     console.log('submitted:', bookingDate, bookingTime, guests, occasion);
   };
+
+  function handleDateChange(e) {
+    setDate(e.target.value);
+
+    var stringify = e.target.value;
+    const date = new Date(stringify);
+
+    props.updateTimes(date);
+
+    setFinalTime(props.availableTimes.map((times) => <option>{times}</option>));
+  }
 
   return (
     <form
@@ -39,12 +54,7 @@ const BookingForm = ({}) => {
         value={bookingTime}
         onChange={(e) => setBookingTime(e.target.value)}
       >
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
+        {finalTime}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input

@@ -6,6 +6,7 @@ import imgFood from '../assets/restauranfood.jpg';
 import imgGreekSalad from '../assets/greek salad.jpg';
 import imgBruchetta from '../assets/bruchetta.svg';
 import imgLemonDessert from '../assets/lemon dessert.jpg';
+import CustomersSays from './CustomersSays';
 
 import './HomePage.css';
 
@@ -70,6 +71,7 @@ const HomePage = () => {
         </div>
         <div className="content">{dishes}</div>
       </section>
+      <CustomersSays />
     </>
   );
 };
