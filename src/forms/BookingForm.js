@@ -39,6 +39,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
         margin: '0 auto',
       }}
       onSubmit={handleSubmit}
+      aria-label="Booking Form"
     >
       <h2>Book Now</h2>
       <label htmlFor="res-date">Choose date</label>
@@ -47,12 +48,14 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
         id="res-date"
         value={bookingDate}
         onChange={(e) => setBookingDate(e.target.value)}
+        aria-label="Booking Date"
       />
       <label htmlFor="res-time">Choose time</label>
       <select
         id="res-time "
         value={bookingTime}
         onChange={(e) => setBookingTime(e.target.value)}
+        aria-label="Booking Time"
       >
         {finalTime}
       </select>
@@ -65,12 +68,14 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
         id="guests"
         value={guests}
         onChange={(e) => setGuests(e.target.value)}
+        aria-label="Number of Guests"
       />
       <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
         value={occasion}
         onChange={(e) => setOccasion(e.target.value)}
+        aria-label="Occasion"
       >
         <option>Birthday</option>
         <option>Anniversary</option>
@@ -79,6 +84,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
         disabled={!bookingDate || !bookingTime || !guests || !occasion}
         type="submit"
         value="Make Your reservation"
+        aria-label="Submit Reservation"
       />
     </form>
   );

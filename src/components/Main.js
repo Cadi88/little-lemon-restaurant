@@ -5,7 +5,6 @@ import HomePage from '../pages/HomePage';
 import CallToAction from '../pages/CallToAction';
 import BookingPage from '../pages/BookingPage';
 import Chicago from '../pages/Chicago';
-import CustomersSays from '../pages/CustomersSays';
 import Specials from '../pages/Specials';
 
 const Main = () => {
