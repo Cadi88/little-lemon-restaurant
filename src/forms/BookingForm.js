@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 const BookingForm = ({ availableTimes, updateTimes }) => {
+  const [fName, setFName] = useState('');
+  const [lName, setLName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [bookingDate, setBookingDate] = useState('');
   const [bookingTime, setBookingTime] = useState('');
   const [guests, setGuests] = useState(1);
@@ -12,6 +16,10 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFName('');
+    setLName('');
+    setEmail('');
+    setPhoneNumber('');
     setBookingDate('');
     setBookingTime('');
     setGuests('');
@@ -42,6 +50,49 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
       aria-label="Booking Form"
     >
       <h2>Book Now</h2>
+      <label htmlFor="fName">First Name</label>
+      <input
+        type="text"
+        id="fName"
+        placeholder="First Name"
+        required
+        minLength={2}
+        maxLength={50}
+        value={fName}
+        onChange={(e) => setFName(e.target.value)}
+      ></input>
+      <label htmlFor="lName">Last Name</label>
+      <input
+        type="text"
+        id="lName"
+        placeholder="Last Name"
+        minLength={2}
+        maxLength={50}
+        value={lName}
+        onChange={(e) => setLName(e.target.value)}
+      ></input>
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        value={email}
+        required
+        minLength={4}
+        maxLength={200}
+        onChange={(e) => setEmail(e.target.value)}
+      ></input>
+      <label htmlFor="phone-number">Phone Number</label>
+      <input
+        type="tel"
+        id="phone-number"
+        placeholder="(xx)-xx-xxxx-xxxx"
+        value={phoneNumber}
+        required
+        minLength={10}
+        maxLength={25}
+        onChange={(e) => setPhoneNumber(e.target.value)}
+      ></input>
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
